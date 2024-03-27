@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
  * binary_tree_balance - measures the balance factor of a binary tree
- * 			i.e the difference between the height of the 
- * 			children node (left node - right node)
+ *			i.e the difference between the height of the
+ *			children node (left node - right node)
  * @tree: the binary tree
  *
  * Return: the height of the tree, 0 if tree is NULL
@@ -24,7 +24,7 @@ int binary_tree_balance(const binary_tree_t *tree)
  * height_traverser - gets the height of the tree
  * @tree: the tree
  * Return: the height of the tree
-i */
+*/
 size_t height_traverser(const binary_tree_t *tree)
 {
 	size_t left, right;
