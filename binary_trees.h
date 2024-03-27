@@ -37,6 +37,8 @@ size_t binary_tree_depth(const binary_tree_t *tree);
 size_t depth_traverser(const binary_tree_t *tree);
 size_t binary_tree_size(const binary_tree_t *tree);
 size_t size_traverser(const binary_tree_t *tree);
+size_t binary_tree_leaves(const binary_tree_t *tree);
+size_t leaves_finder(const binary_tree_t *tree);
 
 
 #endif
