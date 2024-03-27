@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 /**
  * binary_tree_is_full - checks if all the nodes in a tree have two
- * 			or zero child nodes.
+ *			or zero child nodes.
  * @tree: the binary tree
  *
  * Return: 1 if it is full, 0 if tree is NULL or not full
@@ -16,9 +16,9 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		return (0);
 	check = check_nodes(tree);
 	if (check == 0)
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
 
 /**

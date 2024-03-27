@@ -5,7 +5,7 @@
  *			children node (left node - right node)
  * @tree: the binary tree
  *
- * Return: the height of the tree, 0 if tree is NULL
+ * Return: the balance factor of the tree, 0 if tree is NULL
  *
  */
 
@@ -21,7 +21,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 }
 
 /**
- * height_traverser - gets the height of the tree
+ * height_traverser - gets the height of the tree children
  * @tree: the tree
  * Return: the height of the tree
 */
