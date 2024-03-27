@@ -15,6 +15,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	balance = check_balance(tree);
 	if (balance == 0)
 		return (0);
+	if (!tree->left && !tree->right)
+		return (1);
 	check = check_nodes(tree);
 	if (check == 0)
 		return (1);
