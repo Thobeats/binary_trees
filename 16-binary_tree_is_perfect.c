@@ -12,7 +12,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	if (!check_balance(tree))
 		return (0);
-	return (check_nodes(tree->left) == check_nodes(tree->right));
+	return (check_nodes(tree->left) == check_balance(tree->right));
 }
 
 /**
@@ -70,9 +70,9 @@ int check_nodes(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 	if (tree->left && tree->right)
-		node_count = 0;
-	else
 		node_count = 1;
+	else
+		node_count = 0;
 	left = node_count + check_nodes(tree->left);
 	right = left + check_nodes(tree->right);
 
