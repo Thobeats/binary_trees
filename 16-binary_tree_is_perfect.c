@@ -12,7 +12,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	if (!check_balance(tree))
 		return (0);
-	return (check_nodes(tree->left) == check_balance(tree->right));
+	return (check_nodes(tree->left) == check_nodes(tree->right));
 }
 
 /**
