@@ -3,25 +3,16 @@
  * binary_tree_is_perfect - checks if all the nodes in a tree have two
  *			child nodes.
  * @tree: the binary tree.
- * Return: 1 if it is full, 0 if tree is NULL or not full.
+ * Return: 1 if it is perfect, 0 if tree is NULL or not full.
  */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int check, balance;
-
 	if (tree == NULL)
 		return (0);
-	balance = check_balance(tree);
-	if (balance == 0)
+	if (!check_balance(tree))
 		return (0);
-	if (!tree->left && !tree->right)
-		return (1);
-	check = check_nodes(tree);
-	if (check == 0)
-		return (1);
-	else
-		return (0);
+	return (check_nodes(tree->left) == check_nodes(tree->right));
 }
 
 /**
@@ -78,7 +69,7 @@ int check_nodes(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	if ((!tree->left && !tree->right) || (tree->left && tree->right))
+	if (tree->left && tree->right)
 		node_count = 0;
 	else
 		node_count = 1;
