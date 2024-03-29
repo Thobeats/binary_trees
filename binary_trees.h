@@ -52,4 +52,10 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 binary_tree_t *find_ancestor(const binary_tree_t *firstNode, const binary_tree_t *secondNode);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_levelorder_traverse(const binary_tree_t *tree, size_t level, void (*func)(int));
+int binary_tree_is_complete(const binary_tree_t *tree);
+int check_node_leaf(const binary_tree_t *node);
+
+
+
+
 #endif
