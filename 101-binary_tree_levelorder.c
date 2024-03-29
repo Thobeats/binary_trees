@@ -9,6 +9,7 @@
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	size_t height, i;
+
 	if (tree == NULL || func == NULL)
 		return;
 	height = height_traverser(tree);
@@ -26,16 +27,19 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
  *
  */
 
-void binary_tree_levelorder_traverse(const binary_tree_t *tree, size_t level, void (*func)(int))
+void binary_tree_levelorder_traverse(const binary_tree_t *tree,
+									size_t level, void (*func)(int))
 {
 	size_t depth;
+
 	if (tree == NULL || func == NULL)
 		return;
 	depth = depth_traverser(tree);
 	if (level == depth)
 	{
 		func(tree->n);
-	}else
+	}
+	else
 	{
 		if (tree->left)
 			binary_tree_levelorder_traverse(tree->left, level, func);
