@@ -34,12 +34,14 @@ binary_tree_t *find_ancestor(const binary_tree_t *firstNode,
 		return ((binary_tree_t *)firstNode);
 	}
 
-	if (firstNode->parent == NULL || firstNode == secondNode->parent)
+	if (firstNode->parent == NULL || firstNode == secondNode->parent
+		|| (!firstNode->parent->parent && secondNode->parent))
 	{
 		return (find_ancestor(firstNode, secondNode->parent));
 	}
 
-	if (secondNode->parent == NULL || secondNode == firstNode->parent)
+	if (secondNode->parent == NULL || secondNode == firstNode->parent
+		|| (!secondNode->parent->parent && firstNode->parent))
 	{
 		return (find_ancestor(secondNode, firstNode->parent));
 	}
