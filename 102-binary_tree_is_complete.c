@@ -69,7 +69,8 @@ int check_nodes(const binary_tree_t *tree)
 		return (0);
 	if ((tree->left && tree->right) || (!tree->left && !tree->right))
 		check_count = 0;
-	else if((tree->left && !tree->right) && (check_node_leaf(tree->parent->right) == 1))
+	else if ((tree->left && !tree->right) &&
+			(check_node_leaf(tree->parent->right) == 1))
 		check_count = 0;
 	else
 		check_count = 1;
