@@ -29,14 +29,14 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 binary_tree_t *find_ancestor(const binary_tree_t *firstNode,
 							const binary_tree_t *secondNode)
 {
-	if (firstNode->parent == NULL && secondNode->parent == NULL)
-	{
-		return (NULL);
-	}
-
 	if (firstNode == secondNode)
 	{
 		return ((binary_tree_t *)firstNode);
+	}
+	
+	if (firstNode->parent == NULL && secondNode->parent == NULL)
+	{
+		return (NULL);
 	}
 
 	if (firstNode->parent == NULL || firstNode == secondNode->parent
