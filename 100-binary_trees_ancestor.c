@@ -33,7 +33,7 @@ binary_tree_t *find_ancestor(const binary_tree_t *firstNode,
 	{
 		return ((binary_tree_t *)firstNode);
 	}
-	
+
 	if (firstNode->parent == NULL && secondNode->parent == NULL)
 	{
 		return (NULL);
