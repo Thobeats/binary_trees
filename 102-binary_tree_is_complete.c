@@ -10,6 +10,8 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
+	if ((!tree->left && tree->right))
+		return (0);	
 	return ((check_nodes(tree->left) + check_nodes(tree->right)) == 0);
 }
 
@@ -69,7 +71,7 @@ int check_nodes(const binary_tree_t *tree)
 		return (0);
 	if ((tree->left && tree->right) || (!tree->left && !tree->right))
 		check_count = 0;
-	else if ((tree->left && !tree->right) &&
+	else if((tree->left && !tree->right) &&
 			(check_node_leaf(tree->parent->right) == 1))
 		check_count = 0;
 	else
